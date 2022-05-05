@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-bottom: 1px solid white;
+    height: 70px;
+}
+.blue{
+    background: #626FFF;
+}
+.fileira img{
+    width: 160px;
+}
+footer{
+    color: white;
+}
+#logo img{
+    width: 60px;
+    height: 60px;
+}
+main{
+    background: rgb(232, 232, 232);
+}
+#banner{
+    height: 50%;
+    width: 100%;
+}
+#imgBanner{
+    height: 100%;
+    width: 100%;  
+}
+.fileira h2{
+    margin: 30px 0;
+    margin-top: 80px;
+}
+#livros{
+    margin-top: 200px;
+    padding: 0px 50px;
+    text-align: center;
+}
+.fileira--livros--sobre{
+    background: white;
+    padding: 35px;
+}
+.fileira--livros{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.btnWpp{
+    border: 3px solid #626FFF;
+    padding: 2px 30px;
+    border-radius: 10px;
+    color: #626FFF;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-top: 10px; 
+    cursor: pointer;
+}
+#main--escolhido{
+    display: none;
+    position: absolute;
+    left: 10%; 
+    width: 80%; 
+    padding-top: 50px;
+    height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(92, 92, 92);
+    transition: 1s;
+}
+#iconX{
+    width: 20px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+#containerSobre--escolhido{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    height: 250px;
+}
+#livroEscolhido--imagem{
+    background: white;
+    padding: 80px;
+    border-radius: 10px;
+    height: 450px;
+}
+#imagem--escolhido{
+    width: 300px;
+}
+#livroEscolhido--sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+#entrega--escolhido{
+    font-weight: bolder;
+}
+#btnWpp--escolhido{
+    background: #26d366;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media(max-width: 768px){
+    #logo img{
+        width: 30px;
+        height: 30px;
+    }
+    .fileira h2{
+        font-size: 22px;
+    }
+    .fileira--livros--sobre{
+        width: 100px;
+    }
+    .titulo, .estadoLivro, .precoLivro{
+        font-size: 10px;
+    }
+    .fileira--livros--sobre img{
+        width: 60px;
+    }
+    .btnWpp{
+        border: 1px solid #626FFF;
+        width: 90%;
+        padding: 2px 2px;
+        border-radius: 10px;
+        font-weight: bolder;
+        margin-top: 10px; 
+        font-size: 9px;
+    }
+    #main--escolhido{
+        left: 15%;
+        width: 70%; 
+        padding-top: 30px;
+        height: 105vh;
+    }
+    #containerSobre--escolhido{
+        height: 100px;
+    }
+    #livroEscolhido--imagem{
+        padding: 20px;
+        height: 270px;
+    }
+    #imagem--escolhido{
+        width: 200px;
+    }
+    #livroEscolhido--sobre{
+        padding: 30px;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+    }
+    #titulo--escolhido{
+        font-size: 22px;
+    }
+    #preco--escolhido{
+        font-size: 20px;
+    }
+    #entrega--escolhido{
+        font-size: 14px;
+    }
+    #btnWpp--escolhido{
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+}
+@media(max-width: 425px){
+    #logo img{
+        width: 30px;
+        height: 30px;
+    }
+    .fileira--livros--sobre{
+        width: 80%;
+        padding: 40px;
+    }
+    .titulo, .estadoLivro, .precoLivro{
+        font-size: 16px;
+    }
+    .fileira--livros--sobre img{
+        width: 100%;
+    }
+    .btnWpp{
+        border: 2px solid #626FFF;
+        width: 90%;
+        padding: 2px 2px;
+        border-radius: 10px;
+        font-weight: bolder;
+        margin-top: 10px; 
+        font-size: 18px;
+    }
+    #containerSobre--escolhido{
+        margin-top: 30px;
+    }
+    #livroEscolhido--sobre{
+        padding: 20px;
+        width: 180px;
+    }
+    #titulo--escolhido{
+        font-size: 18px;
+    }
+    #preco--escolhido{
+        font-size: 20px;
+    }
+    #entrega--escolhido{
+        font-size: 12px;
+    }
+    #btnWpp--escolhido{
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+}
+@media(max-width: 320px){
+    .fileira--livros--sobre{
+        width: 100%;
+        padding: 40px;
+    }
+    #main--escolhido{
+        left: 5%;
+        width: 90%; 
+        padding-top: 30px;
+    }
+}

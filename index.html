@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros Usados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/images/logo_livros.png" type="image/x-icon">
+</head>
+<body>
+    <header class="blue">
+        <div id="logo"><img src="/images/logo_livros.png" alt="Logo livros usados" /></div>
+    </header>
+    <main id="main">
+        <div id="banner" class="blue">
+            <img id="imgBanner" src="/images/banner.png" alt="Imagem de livros no Banner" />
+        </div>
+        <div id="livros">
+            <div id="mais-populares" class="fileira">
+                <h2>Mais populares</h2>
+                <div class="fileira--livros">
+                    <div class="fileira--livros--sobre">
+                        <img class="imgLivro" src="" alt="Imagem do livro">
+                        <h3 class="titulo"></h3>
+                        <p class="estadoLivro"></p>
+                        <h4 class="precoLivro"></h4>
+                        <button class="btnWpp">Ver livro</button>
+                    </div>
+                </div>
+            </div>
+            <div id="talvez-goste" class="fileira">
+                <h2>Livros que você talvez goste</h2>
+                <div class="fileira--livros"></div>
+            </div>
+            <div id="outros" class="fileira">
+                <h2>Outras opções para você</h2>
+                <div class="fileira--livros"></div>
+            </div>
+        </div>
+    </main>
+    <main id="main--escolhido">
+        <img id="iconX" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Letter_x.svg/569px-Letter_x.svg.png" />
+        <div id="containerSobre--escolhido">
+            <div id="livroEscolhido--imagem">
+                <img id="imagem--escolhido" alt="Livro selecionado" />
+            </div>
+            <div id="livroEscolhido--sobre">
+                <h1 id="titulo--escolhido"></h1>
+                <h2 id="preco--escolhido"></h2>
+                <p id="entrega--escolhido">O produto será entregue em mãos, clique no botão abaixo e fale com um vendedor.</p>
+                <button id="btnWpp--escolhido">Entrar em contato</button>
+            </div>
+        </div>
+    </main>
+    <footer class="blue">
+        Footer
+    </footer>
+    <script src="livros.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
