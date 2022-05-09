@@ -6,10 +6,11 @@
 }
 header{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     border-bottom: 1px solid white;
     height: 70px;
+    padding: 5px 0px;
 }
 .blue{
     background: #626FFF;
@@ -19,13 +20,24 @@ header{
 }
 footer{
     color: white;
+    height: 80px;
+}
+#unidade{
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    background: #626FFF;
+    padding-bottom: 10px;
 }
 #logo img{
     width: 60px;
     height: 60px;
+    cursor: pointer;
 }
 main{
     background: rgb(232, 232, 232);
+    padding-bottom: 200px;
 }
 #banner{
     height: 50%;
@@ -70,7 +82,7 @@ main{
     left: 10%; 
     width: 80%; 
     padding-top: 50px;
-    height: 80vh;
+    height: 500px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 1px rgb(92, 92, 92);
     transition: 1s;
@@ -120,6 +132,12 @@ main{
     cursor: pointer;
 }
 @media(max-width: 768px){
+    header{
+        padding: 0px 0px;
+    }
+    #unidade{
+        font-size: 16px;
+    }
     #logo img{
         width: 30px;
         height: 30px;
@@ -149,7 +167,7 @@ main{
         left: 15%;
         width: 70%; 
         padding-top: 30px;
-        height: 105vh;
+        height: 400px;
     }
     #containerSobre--escolhido{
         height: 100px;
@@ -182,9 +200,15 @@ main{
     }
 }
 @media(max-width: 425px){
+    #livros{
+        margin-top: 150px;
+    }
     #logo img{
         width: 30px;
         height: 30px;
+    }
+    #imgBanner{
+        height: 200px;
     }
     .fileira--livros--sobre{
         width: 80%;
@@ -227,6 +251,11 @@ main{
     }
 
 }
+@media(max-width: 375px){
+    #unidade{
+        font-size: 14px;
+    }
+}
 @media(max-width: 320px){
     .fileira--livros--sobre{
         width: 100%;
@@ -236,5 +265,8 @@ main{
         left: 5%;
         width: 90%; 
         padding-top: 30px;
+    }
+    #unidade{
+        font-size: 12px;
     }
 }
