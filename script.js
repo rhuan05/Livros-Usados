@@ -2,6 +2,7 @@ let titulos = document.querySelectorAll('.titulo');
 let precos = document.querySelectorAll('.precoLivro');
 let modeloLivro = document.querySelector('.fileira--livros--sobre');
 let imgBanner = document.getElementById('imgBanner');
+let outrosImg;
 
 if (window.screen.width <= 375){
     imgBanner.src = '/images/imgBanner320px.png';
@@ -14,25 +15,26 @@ if (window.screen.width <= 375){
 maisPopulares.map((e, i) => {
     let novoLivro = modeloLivro.cloneNode(true);
     document.querySelector('#mais-populares .fileira--livros').appendChild(novoLivro);
-    document.querySelector('.titulo').innerHTML = maisPopulares[i].name;
-    document.querySelector('.precoLivro').innerHTML = maisPopulares[i].price;
-    document.querySelector('.imgLivro').src = maisPopulares[i].img;
+    novoLivro.childNodes[3].innerHTML = maisPopulares[i].name;
+    novoLivro.childNodes[7].innerHTML = maisPopulares[i].price;
+    novoLivro.childNodes[1].src = maisPopulares[i].img[0];
+    novoLivro.childNodes[11].innerHTML += maisPopulares[i].img[1];
 });
 
 talvezGoste.map((e, i) => {
     let novoLivro = modeloLivro.cloneNode(true);
     document.querySelector('#talvez-goste .fileira--livros').appendChild(novoLivro);
-    document.querySelector('.titulo').innerHTML = talvezGoste[i].name;
-    document.querySelector('.precoLivro').innerHTML = talvezGoste[i].price;
-    document.querySelector('.imgLivro').src = talvezGoste[i].img;
+    novoLivro.childNodes[3].innerHTML = talvezGoste[i].name;
+    novoLivro.childNodes[7].innerHTML = talvezGoste[i].price;
+    novoLivro.childNodes[1].src = talvezGoste[i].img[0];
 });
 
 outros.map((e, i) => {
     let novoLivro = modeloLivro.cloneNode(true);
     document.querySelector('#outros .fileira--livros').appendChild(novoLivro);
-    document.querySelector('.titulo').innerHTML = outros[i].name;
-    document.querySelector('.precoLivro').innerHTML = outros[i].price;
-    document.querySelector('.imgLivro').src = outros[i].img;
+    novoLivro.childNodes[3].innerHTML = outros[i].name;
+    novoLivro.childNodes[7].innerHTML = outros[i].price;
+    novoLivro.childNodes[1].src = outros[i].img[0];
 });
 
 let btnsWpp = document.querySelectorAll('.btnWpp');
@@ -44,11 +46,19 @@ document.addEventListener('click', (e) => {
         let sobreElementos = elementoClick.parentNode;
         let mainEscolhido = document.getElementById('main--escolhido');
         mainEscolhido.style.display = 'block';
-        mainEscolhido.style.top = `${window.scrollY}px`
+        mainEscolhido.style.top = `${window.scrollY + 50}px`
         document.getElementById('titulo--escolhido').innerHTML = sobreElementos.children[1].innerHTML;
         document.getElementById('preco--escolhido').innerHTML = sobreElementos.children[3].innerHTML;
         document.getElementById('imagem--escolhido').src = sobreElementos.children[0].src;
+        document.getElementById('imgsLivros').innerHTML = `<img class="outrosImg" src=${sobreElementos.children[0].src} /><br><img class="outrosImg" src=${sobreElementos.children[5].childNodes[0].innerHTML} />`;
         
+        outrosImg = document.querySelectorAll('.outrosImg');
+        outrosImg.forEach((e) => {
+            e.addEventListener('click', (e) => {
+                let imgSrc = e.target;
+                document.getElementById('imagem--escolhido').src = imgSrc.src;
+            })
+        })
     }
 });
 

@@ -10,6 +10,16 @@
     <link rel="shortcut icon" href="/images/logo_livros.png" type="image/x-icon">
 </head>
 <body>
+    <div id="model">
+        <div class="fileira--livros--sobre">
+            <img class="imgLivro" src="" alt="Imagem do livro">
+            <h3 class="titulo"></h3>
+            <p class="estadoLivro"></p>
+            <h4 class="precoLivro"></h4>
+            <button class="btnWpp">Ver livro</button>
+            <div id="imgDetalhadas"></div>
+        </div>
+    </div>
     <header class="blue">
         <div id="logo"><img src="/images/logo_livros.png" alt="Logo livros usados" /></div>
     </header>
@@ -21,15 +31,7 @@
         <div id="livros">
             <div id="mais-populares" class="fileira">
                 <h2>Mais populares</h2>
-                <div class="fileira--livros">
-                    <div class="fileira--livros--sobre">
-                        <img class="imgLivro" src="" alt="Imagem do livro">
-                        <h3 class="titulo"></h3>
-                        <p class="estadoLivro"></p>
-                        <h4 class="precoLivro"></h4>
-                        <button class="btnWpp">Ver livro</button>
-                    </div>
-                </div>
+                <div class="fileira--livros"></div>
             </div>
             <div id="talvez-goste" class="fileira">
                 <h2>Livros que você talvez goste</h2>
@@ -49,14 +51,16 @@
             </div>
             <div id="livroEscolhido--sobre">
                 <h1 id="titulo--escolhido"></h1>
+                <h2 id="pagina--escolhido"></h2>
                 <h2 id="preco--escolhido"></h2>
+                <div id="imgsLivros"></div>
                 <p id="entrega--escolhido">O produto será entregue em mãos, clique no botão abaixo e fale com um vendedor.</p>
                 <button id="btnWpp--escolhido">Entrar em contato</button>
             </div>
         </div>
     </main>
     <footer class="blue">
-        Footer
+        Livros Usados
     </footer>
     <script src="livros.js"></script>
     <script src="script.js"></script>
