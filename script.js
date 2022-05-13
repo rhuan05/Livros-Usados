@@ -27,6 +27,7 @@ talvezGoste.map((e, i) => {
     novoLivro.childNodes[3].innerHTML = talvezGoste[i].name;
     novoLivro.childNodes[7].innerHTML = talvezGoste[i].price;
     novoLivro.childNodes[1].src = talvezGoste[i].img[0];
+    novoLivro.childNodes[11].innerHTML += talvezGoste[i].img[1];
 });
 
 outros.map((e, i) => {
@@ -35,11 +36,12 @@ outros.map((e, i) => {
     novoLivro.childNodes[3].innerHTML = outros[i].name;
     novoLivro.childNodes[7].innerHTML = outros[i].price;
     novoLivro.childNodes[1].src = outros[i].img[0];
+    novoLivro.childNodes[11].innerHTML += outros[i].img[1];
 });
 
 let btnsWpp = document.querySelectorAll('.btnWpp');
 
-document.addEventListener('click', (e) => {
+document.addEventListener('click', (e, i) => {
     let elementoClick = e.target;
 
     if(elementoClick.className == 'btnWpp'){
