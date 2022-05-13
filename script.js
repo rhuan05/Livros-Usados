@@ -5,11 +5,11 @@ let imgBanner = document.getElementById('imgBanner');
 let outrosImg;
 
 if (window.screen.width <= 375){
-    imgBanner.src = '/images/imgBanner320px.png';
+    imgBanner.src = '/assets/site/imgBanner320px.png';
 } else if (window.screen.width <= 425){
-    imgBanner.src = '/images/imgBanner425px.png';
+    imgBanner.src = '/assets/site/imgBanner425px.png';
 } else {
-    imgBanner.src = '/images/banner.png';
+    imgBanner.src = '/assets/site/banner.png';
 }
 
 maisPopulares.map((e, i) => {
